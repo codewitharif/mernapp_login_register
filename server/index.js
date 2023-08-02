@@ -37,7 +37,10 @@ app.post("/register", async (req, res) => {
         res.json("Already have an account");
       } else {
         User.create({ name: name, email: email, password: password })
-          .then((result) => res.json("Account created"))
+          .then((result) => {
+            res.json("Account created");
+            alert("Account created successfully");
+          })
           .catch((err) => res.json(err));
       }
     })
