@@ -16,7 +16,10 @@ const Signup = () => {
         email,
         password,
       })
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        alert("Account created successfully!");
+      })
       .catch((err) => console.log(err));
   };
   return (
