@@ -15,10 +15,16 @@ app.use(
 );
 
 //enable cors
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://connecthubz.netlify.app"],
+        methods: ["POST", "GET"],
+        credentials: true,
+      })
+));
 
 app.get("/", (req, res) => {
-  res.json("welcome buddy...!");
+  res.json("welcome to connectHubz...!");
 });
 
 //registration
