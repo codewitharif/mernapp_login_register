@@ -12,7 +12,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/login", { email, password })
+      .post("https://mernapp-login-register-server.vercel.app/login", {
+        email,
+        password,
+      })
       .then((result) => {
         const name = result.data.name;
         console.log(name);
