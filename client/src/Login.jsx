@@ -23,7 +23,10 @@ const Login = () => {
         console.log(result);
         navigate("/home");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        navigate("/login");
+      });
   };
 
   return (
