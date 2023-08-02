@@ -17,7 +17,7 @@ app.use(
 //enable cors
 app.use(
   cors({
-    origin: [],
+    origin: ["https://connecthubz.netlify.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
