@@ -26,8 +26,8 @@ const Users = () => {
         <tbody>
           {users.map((user, index) => {
             return (
-              <tr>
-                <th scope="row">{user.index}</th>
+              <tr key={index}>
+                <th scope="row">{index}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.password}</td>
