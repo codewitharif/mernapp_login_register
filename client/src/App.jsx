@@ -4,6 +4,7 @@ import Signup from "./Signup";
 import Login from "./Login";
 import Home from "./Home";
 import Users from "./Users";
+import Error from "./Error";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/register" element={<Signup />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/users" element={<Users />}></Route>
+          <Route path="*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
