@@ -21,7 +21,7 @@ const Login = () => {
         console.log(name);
         localStorage.setItem("userName", name);
         console.log(result);
-        navigate("/home");
+        navigate("/users");
       })
       .catch((err) => {
         console.log(err);
