@@ -18,3 +18,8 @@ p {
 Link {
   font-family: sans-serif;
 }
+
+span {
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
