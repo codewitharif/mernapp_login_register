@@ -27,7 +27,7 @@ const Users = () => {
           {users.map((user, index) => {
             return (
               <tr key={index}>
-                <th scope="row">{index}</th>
+                <th scope="row">{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.password}</td>
