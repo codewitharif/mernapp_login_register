@@ -15,8 +15,8 @@ const Users = () => {
   const handleLogout = () => {
     // Clear the user authentication data from local storage
     try {
-      if (localStorage.getItem("token")) {
-        localStorage.removeItem("token");
+      if (localStorage.getItem("userName")) {
+        localStorage.removeItem("userName");
         useNavigate("/login");
         // Clear the user authentication token from local storage
         // Perform any additional cleanup on the frontend (e.g., clear user data, etc.)
