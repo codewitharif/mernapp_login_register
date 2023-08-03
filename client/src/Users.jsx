@@ -17,7 +17,14 @@ const Users = () => {
     try {
       if (localStorage.getItem("userName")) {
         localStorage.removeItem("userName");
-        useNavigate("/");
+        //useNavigate("/");
+        const currentURL = window.location.href;
+        console.log(currentURL);
+
+        window.location.href = "https://connecthubz.netlify.app";
+        // Reload the current page
+        window.location.href = window.location.href;
+
         // Clear the user authentication token from local storage
         // Perform any additional cleanup on the frontend (e.g., clear user data, etc.)
         // Redirect the user to the login page or update the state to handle logged-out state
