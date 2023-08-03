@@ -11,7 +11,9 @@ const Users = () => {
   }, []);
   return (
     <div className="container">
-      <h1>Registered User</h1>
+      <h1>
+        <b>Registered User</b>
+      </h1>
       <br />
       <br />
       <table class="table table-hover">
