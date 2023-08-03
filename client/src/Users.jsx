@@ -12,6 +12,7 @@ const Users = () => {
   return (
     <div className="container">
       <h1>Registered User</h1>
+      <br/><br/>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -25,7 +26,7 @@ const Users = () => {
           {users.map((user) => {
             return (
               <tr>
-                <th scope="row">{user._id}</th>
+                <th scope="row">{user[]}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.password}</td>
