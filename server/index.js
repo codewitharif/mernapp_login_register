@@ -61,6 +61,12 @@ app.post("/login", async (req, res) => {
   });
 });
 
+app.get("/users", (req, res) => {
+  User.find()
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
+});
+
 connectDB();
 
 app.listen(3000, () => {
