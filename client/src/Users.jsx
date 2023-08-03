@@ -17,7 +17,7 @@ const Users = () => {
     try {
       if (localStorage.getItem("userName")) {
         localStorage.removeItem("userName");
-        useNavigate("/login");
+        useNavigate("/");
         // Clear the user authentication token from local storage
         // Perform any additional cleanup on the frontend (e.g., clear user data, etc.)
         // Redirect the user to the login page or update the state to handle logged-out state
