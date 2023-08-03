@@ -14,8 +14,24 @@ const Users = () => {
 
   const handleLogout = () => {
     // Clear the user authentication data from local storage
-    localStorage.removeItem("userName");
-    useNavigate("/login");
+    try {
+      if (localStorage.getItem("token")) {
+        localStorage.removeItem("token");
+        useNavigate("/login");
+        // Clear the user authentication token from local storage
+        // Perform any additional cleanup on the frontend (e.g., clear user data, etc.)
+        // Redirect the user to the login page or update the state to handle logged-out state
+      } else {
+        console.warn(
+          "Token not found in local storage. User might already be logged out."
+        );
+        // Handle the case where the token is not found in local storage (e.g., user is already logged out)
+      }
+    } catch (error) {
+      console.error("Error while logging out:", error);
+      // Handle any errors that might occur while accessing local storage
+    }
+
     // Assuming you store the authentication token as 'token'
     // Perform any additional cleanup on the frontend (e.g., clear user data, etc.)
     // Redirect the user to the login page or update the state to handle logged-out state
