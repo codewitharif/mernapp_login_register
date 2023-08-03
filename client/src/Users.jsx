@@ -21,7 +21,7 @@ const Users = () => {
         const currentURL = window.location.href;
         console.log(currentURL);
 
-        window.location.href = "https://connecthubz.netlify.app";
+        window.location.href = "https://connecthubz.netlify.app/login";
         // Reload the current page
         window.location.href = window.location.href;
 
