@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./App.css";
 import Login from "./Login";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("https://mernapp-login-register-server.vercel.app/users")
@@ -17,13 +19,7 @@ const Users = () => {
     try {
       if (localStorage.getItem("userName")) {
         localStorage.removeItem("userName");
-        //useNavigate("/");
-        const currentURL = window.location.href;
-        console.log(currentURL);
-
-        window.location.href = "https://connecthubz.netlify.app/login";
-        // Reload the current page
-        window.location.href = window.location.href;
+        navigate("/login");
 
         // Clear the user authentication token from local storage
         // Perform any additional cleanup on the frontend (e.g., clear user data, etc.)
