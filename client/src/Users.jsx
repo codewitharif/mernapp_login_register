@@ -25,7 +25,7 @@ const Users = () => {
           {users.map((user) => {
             return (
               <tr>
-                <th scope="row">1</th>
+                <th scope="row">{user._id}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.password}</td>
